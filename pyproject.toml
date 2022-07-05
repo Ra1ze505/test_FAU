@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "test_fau"
+version = "0.1.0"
+description = ""
+authors = ["Ra1ze505 <87398772+Ra1ze505@users.noreply.github.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = "^0.78.0"
+uvicorn = "^0.18.2"
+aioredis = "^2.0.1"
+psutil = "^5.9.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

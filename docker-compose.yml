@@ -1,0 +1,29 @@
+version: '3.3'
+
+services:
+  web:
+    build:
+      context: ./
+    volumes:
+      - ./:/app
+    ports:
+      - "8000:80"
+    restart: always
+    depends_on:
+      - redis
+
+
+  redis:
+    image: redis
+    restart: always
+    container_name: 'redis'
+    command: redis-server
+    working_dir: /data
+    volumes:
+      - redis-data:/data
+      - /etc/localtime:/etc/localtime
+    ports:
+      - "6379:6379"
+
+volumes:
+  redis-data:
